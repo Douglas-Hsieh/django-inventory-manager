@@ -20,4 +20,4 @@ Quick start
 
 3. Run `python manage.py migrate` to create the inventory_manager models.
 
-4. Visit http://127.0.0.1:8000/inventory_manager/ to manage inventory.
+4. Start development server and visit http://127.0.0.1:8000/inventory_manager/ to manage inventory.

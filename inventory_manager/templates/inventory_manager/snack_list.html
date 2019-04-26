@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Snack List
+{% endblock title %}
+
+{% block content %}
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Ingredients</td>
+            <td>Complementary Drinks</td>
+        </tr>
+        {% for snack in snacks %}
+            <tr>
+                <td><a href="{% url 'inventory_manager:snack_detail' snack.pk %}">{{ snack.name }}</a></td>
+                <td>{{ snack.ingredients }}</td>
+                <td>
+                    {% for drink in snack.drinks.all %}
+                        <li>{{ drink.name }}</li>
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

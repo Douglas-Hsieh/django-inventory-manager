@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'inventory_manager:drink_create' %}">Drink Create</a>
+    <a href="{% url 'inventory_manager:drink_list' %}">Drink List</a>
+
+
+    <a href="{% url 'inventory_manager:snack_create' %}">Snack Create</a>
+    <a href="{% url 'inventory_manager:snack_list' %}">Snack List</a>
+
+{% endblock %}
